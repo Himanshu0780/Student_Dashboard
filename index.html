@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>CCE</title>
+</head>
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<span class="text">CCE</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Assigment</span>
+					<span id="pendingCount" style="background:var(--red);color:#fff;border-radius:12px;padding:2px 8px;font-size:12px;margin-left:8px;">0</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Attandance</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Notice</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#" id="sidebarSettings">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout" id="logoutBtn">
+					<i class='bx bxs-log-out'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">1</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/Himanshu.jpg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>87</h3>
+						<p>Total Attandance</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">
+						<h3>5</h3>
+						<p>Assigment</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Time Table</h3>
+						<i class='bx bx-calendar' id="openCalendar"></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Subject</th>
+								<th>Time</th>
+								<th>Faculty</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>DAA</p>
+								</td>
+								<td>9:30 - 10:20</td>
+								<td>Dr.Ritu</td>
+							</tr>
+							<tr>
+								<td>
+									<p>DM</p>
+								</td>
+								<td>10:20 - 11:10</td>
+								<td>Dr.Hemant</td>
+							</tr>
+							<tr>
+								<td>
+									<p>OS</p>
+								</td>
+								<td>11:10 - 12:00</td>
+								<td>Ms.Rubi</td>
+							</tr>
+							<tr>
+								<td>
+									<p>EVS</p>
+								</td>
+								<td>12:00 - 12:50</td>
+								<td>Dr.Sukhdeep</td>
+							</tr>
+							<tr>
+								<td>
+									<p>BREAK</p>
+								</td>
+								<td>12:50 - 1:40</td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>
+									<p>DAA-LAB</p>
+								</td>
+								<td>1:40 - 3:10</td>
+								<td>Mrs.Preeti</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>NOTICES</h3>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+                        <li class="completed">
+                            <p>Academic Calander July2025-Dec2025</p>
+                            <a href="files/AcademicCalendar_July2025-Dec2025.pdf" download>
+                                <i class='bx bx-download'></i>
+                            </a>
+                        </li>
+            </ul>
+				</div>
+			</div>
+    </div>
+</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTEN--->
+	<!-- Calendar Modal -->
+<div id="calendarModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeCalendar">&times;</span>
+		<h2 style="color: var(--dark);">Select Date</h2>
+        <div id="calendar"></div>
+    </div>
+</div>
+<!-- Profile Modal -->
+<div id="profileModal" class="modal">
+    <div class="modal-content" style="max-width:400px;">
+        <span class="close" id="closeProfile">&times;</span>
+        <div style="text-align:center;">
+            <img src="img/Himanshu.jpg" alt="Profile" style="width:90px;height:90px;border-radius:50%;margin-bottom:10px;">
+			<h2 style="margin:10px 0; color:var(--dark);">Himanshu</h2>
+			<p style="color:var(--dark-grey);margin-bottom:10px;">Student, Computer Science</p>
+			<table style="margin:0 auto 15px auto;text-align:left; color:var(--dark);">
+				<tr><td><strong>Roll No:</strong></td><td>2338448</td></tr>
+				<tr><td><strong>Email:</strong></td><td>himanshu@gmail.com</td></tr>
+				<tr><td><strong>Phone:</strong></td><td>+91-1234567890</td></tr>
+				<tr><td><strong>Year:</strong></td><td>3rd Year</td></tr>
+				<tr><td><strong>Section:</strong></td><td>C</td></tr>
+			</table>
+			<div style="display:flex;justify-content:center;gap:10px;">
+				<button id="editProfileBtn" style="padding:8px 16px;border-radius:20px;background:var(--blue);color:#fff;border:none;cursor:pointer;">Edit Profile</button>
+				<button id="settingsBtn" style="padding:8px 16px;border-radius:20px;background:var(--grey);color:var(--dark);border:none;cursor:pointer;">Settings</button>
+			</div>
+		</div>
+		<div id="editProfileForm" style="display:none;margin-top:20px;">
+			<h3 style="color:var(--dark);">Edit Profile</h3>
+			<form>
+				<input type="file" id="profilePicInput" accept="image/*" style="margin-bottom:8px;">
+				<input type="text" placeholder="Name" value="Himanshu" style="width:100%;margin-bottom:8px;color:var(--dark);">
+				<input type="email" placeholder="Email" value="himanshu@gmail.com" style="width:100%;margin-bottom:8px;color:var(--dark);">
+				<input type="text" placeholder="Phone" value="+91-1234567890" style="width:100%;margin-bottom:8px;color:var(--dark);">
+				<button type="submit" style="padding:6px 16px;border-radius:20px;background:var(--blue);color:#fff;border:none;cursor:pointer;">Save</button>
+				<button type="button" id="cancelEdit" style="padding:6px 16px;border-radius:20px;background:var(--grey);color:var(--dark);border:none;cursor:pointer;margin-left:8px;">Cancel</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Assignment Modal -->
+<div id="assignmentModal" class="modal" style="display:none;">
+    <div class="modal-content" style="width:90vw;max-width:1100px;min-height:70vh;padding:0;border-radius:16px;">
+        <div style="background:var(--blue);color:#fff;padding:28px 40px;border-top-left-radius:16px;border-top-right-radius:16px;display:flex;justify-content:space-between;align-items:center;">
+            <h2 style="margin:0;font-size:2em;">Assignment</h2>
+            <span class="close" id="closeAssignment" style="font-size:32px;cursor:pointer;">&times;</span>
+        </div>
+        <div style="padding:40px;display:flex;gap:40px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:320px;">
+                <form id="assignmentForm" style="margin-bottom:24px;">
+                    <label for="subjectSelect" style="font-weight:600;color:var(--dark);margin-bottom:12px;display:block;font-size:1.1em;">Select Subject</label>
+                    <select id="subjectSelect" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--grey);margin-bottom:18px;font-size:1em;">
+                        <option value="">-- Choose Subject --</option>
+                        <option value="math">COA</option>
+                        <option value="physics">DAA</option>
+                        <option value="cs">DM</option>
+                        <option value="evs">EVS</option>
+                        <option value="os">OOPs</option>
+                    </select>
+                    <label for="assignmentFile" style="font-weight:600;color:var(--dark);margin-bottom:12px;display:block;font-size:1.1em;">Upload Assignment</label>
+                    <input type="file" id="assignmentFile" accept=".pdf,.doc,.docx,.ppt,.pptx" style="margin-bottom:18px;width:100%;padding:10px;border-radius:8px;border:1px solid var(--grey);">
+                    <button type="submit" style="padding:10px 32px;border-radius:24px;background:var(--blue);color:#fff;border:none;cursor:pointer;font-weight:600;font-size:1em;">Upload</button>
+                </form>
+                <div id="assignmentStatus" style="margin-bottom:24px;color:var(--dark-grey);font-size:1.1em;"></div>
+            </div>
+            <div style="flex:2;min-width:320px;">
+                <div style="display:flex;gap:32px;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:220px;">
+                        <h3 style="color:var(--dark);margin-bottom:12px;font-size:1.2em;">Pending Assignments</h3>
+                        <ul id="pendingAssignments" style="color:var(--dark);margin-bottom:8px;list-style:none;padding:0;">
+                            <!-- List will be filled by JS -->
+                        </ul>
+                    </div>
+                    <div style="flex:1;min-width:220px;">
+                        <h3 style="color:var(--dark);margin-bottom:12px;font-size:1.2em;">Uploaded Assignments</h3>
+                        <ul id="uploadedAssignments" style="color:var(--dark);list-style:none;padding:0;">
+                            <!-- List will be filled by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Attendance Modal -->
+<div id="attendanceModal" class="modal" style="display:none;">
+    <div class="modal-content" style="width:92vw;max-width:950px;min-height:62vh;padding:0;border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
+        <div style="background:var(--blue);color:#fff;padding:30px 44px;border-top-left-radius:18px;border-top-right-radius:18px;display:flex;justify-content:space-between;align-items:center;">
+            <h2 style="margin:0;font-size:2.2em;letter-spacing:1px;">My Attendance</h2>
+            <span class="close" id="closeAttendance" style="font-size:34px;cursor:pointer;">&times;</span>
+        </div>
+        <div style="padding:44px;display:flex;gap:44px;flex-wrap:wrap;">
+            <!-- Circular Progress -->
+            <div style="flex:1;min-width:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <div style="position:relative;width:180px;height:180px;">
+                    <canvas id="attendanceCircle" width="180" height="180"></canvas>
+                    <div id="attendancePercentText" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:2.5em;font-weight:700;color:var(--blue);"></div>
+                </div>
+                <div style="margin-top:18px;font-size:1.2em;color:var(--dark);font-weight:500;">Total Attendance</div>
+            </div>
+            <!-- Animated Bar Graphs -->
+            <div style="flex:2;min-width:320px;">
+                <h3 style="color:var(--dark);margin-bottom:18px;font-size:1.3em;">Subject Attendance</h3>
+                <div id="attendanceBars">
+                    <!-- Bars will be rendered by JS -->
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:36px;">
+            <div style="display:flex;align-items:center;gap:18px;margin-bottom:18px;">
+                <h3 style="color:var(--dark);font-size:1.2em;margin:0;">Attendance Tracker</h3>
+                <input type="date" id="attendanceDatePicker" style="padding:6px 12px;border-radius:8px;border:1px solid var(--grey);font-size:1em;">
+            </div>
+            <div style="overflow-x:auto;">
+                <table style="width:100%;border-collapse:collapse;background:var(--light);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+                    <thead>
+                        <tr style="background:var(--grey);color:var(--dark);">
+                            <th style="padding:12px;text-align:left;">Subject</th>
+                            <th style="padding:12px;text-align:left;">Status</th>
+                            <th style="padding:12px;text-align:left;">Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendanceTodayTable" style="color:var(--dark);">
+						<!-- Rows will be filled by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Settings Modal -->
+<div id="settingsModal" class="modal" style="display:none;">
+    <div class="modal-content" style="width:420px;max-width:95vw;padding:0;border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
+        <div style="background:var(--blue);color:#fff;padding:24px 32px;border-top-left-radius:18px;border-top-right-radius:18px;display:flex;justify-content:space-between;align-items:center;">
+            <h2 style="margin:0;font-size:1.5em;">Settings</h2>
+            <span class="close" id="closeSettings" style="font-size:28px;cursor:pointer;">&times;</span>
+        </div>
+        <form id="settingsForm" style="padding:32px;display:flex;flex-direction:column;gap:22px;">
+            <div>
+                <label style="font-weight:600;color:var(--dark);margin-bottom:8px;display:block;">Theme</label>
+                <select id="themeSelect" style="width:100%;padding:8px;border-radius:8px;border:1px solid var(--grey);font-size:1em;">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="system">System Default</option>
+                </select>
+            </div>
+            <div>
+                <label style="font-weight:600;color:var(--dark);margin-bottom:8px;display:block;">Notification</label>
+                <label style="display:flex;align-items:center;gap:10px;">
+                    <input type="checkbox" id="emailNotify" style="width:18px;height:18px;">
+					<span style="color:var(--dark);">Email Alerts</span>
+                </label>
+                <label style="display:flex;align-items:center;gap:10px;">
+                    <input type="checkbox" id="smsNotify" style="width:18px;height:18px;">
+					<span style="color:var(--dark);">SMS Alerts</span>
+                </label>
+            </div>
+            <div>
+                <label style="font-weight:600;color:var(--dark);margin-bottom:8px;display:block;">Language</label>
+                <select id="langSelect" style="width:100%;padding:8px;border-radius:8px;border:1px solid var(--grey);font-size:1em;">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+            <div style="display:flex;justify-content:flex-end;gap:12px;">
+                <button type="button" id="resetSettings" style="padding:8px 18px;border-radius:16px;background:var(--grey);color:var(--dark);border:none;cursor:pointer;">Reset</button>
+                <button type="submit" style="padding:8px 18px;border-radius:16px;background:var(--blue);color:#fff;border:none;cursor:pointer;">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Login Modal -->
+<div id="loginModal" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(4, 15, 49, 0.12);display:flex;align-items:center;justify-content:center;z-index:9999;">
+    <div style="background:var(--light);padding:48px 36px 36px 36px;border-radius:24px;box-shadow:0 8px 32px rgba(0,0,0,0.14);width:350px;max-width:90vw;display:flex;flex-direction:column;align-items:center;">
+        <h2 style="color:var(--blue);margin-bottom:24px;font-size:2em;font-weight:700;letter-spacing:1px;">Login</h2>
+        <form id="loginForm" style="width:100%;display:flex;flex-direction:column;gap:18px;">
+            <input type="text" id="loginUser" placeholder="Username" required style="padding:12px;border-radius:12px;border:1px solid var(--grey);font-size:1em;">
+            <input type="password" id="loginPass" placeholder="Password" required style="padding:12px;border-radius:12px;border:1px solid var(--grey);font-size:1em;">
+            <button type="submit" style="padding:12px 0;border-radius:12px;background:var(--blue);color:#fff;font-size:1.1em;font-weight:600;border:none;cursor:pointer;transition:background 0.2s;">Login</button>
+        </form>
+        <div id="loginError" style="color:var(--red);margin-top:18px;font-size:1em;display:none;"></div>
+    </div>
+</div>
+	<script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
